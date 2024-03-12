@@ -3,11 +3,20 @@
 
 int main() {
 	int sum = 1;
+	
+	
 	for (int i = 2; i <= 100; i++) {
-		if () {
+		int count = 0;
+		for (int j = 2; j < i; j++) {
+			if (i%j == 0) {
+				count++;
+			}
+		}
+		if (count > 0) {
 			sum += i;
 		}
 	}
+	printf("0부터 100까지의 소수의 합 : %d", sum);
 
 	return 0;
 }

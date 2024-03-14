@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 int main() {
 	clock_t start, stop;
 	double duration;

@@ -1,4 +1,5 @@
 // 1부터 100까지의 소수의 합
+/*
 #include <stdio.h>
 
 int main() {
@@ -20,3 +21,4 @@ int main() {
 
 	return 0;
 }
+*/

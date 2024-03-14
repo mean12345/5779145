@@ -8,7 +8,7 @@ int main() {
 	start = clock();
 	
 	int sum = 0;
-
+	 
 	for (int i = 2; i <= 100; i++) {
 		int count = 0;
 		for (int j = 2; j < i; j++) {

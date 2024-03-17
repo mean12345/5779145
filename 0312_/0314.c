@@ -4,7 +4,7 @@
 int main() {
     clock_t start, stop;
     double duration;
-
+   
     start = clock();
 
     int sum = 0;

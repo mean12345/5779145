@@ -2,25 +2,25 @@
 #include <stdio.h>
 #include <time.h> 
 
-long factorial_iter(long n); 
+long factorial_iter(long n);
 long factorial_rec(long n);
- 
+
 int main() {
 
-	clock_t start_iter, end_iter; 
+	clock_t start_iter, end_iter;
 	float duration_iter;
-	start_iter = clock(); 
+	start_iter = clock();
 
 	long result_iter = factorial_iter(20);
-    printf("%ld", result_iter);
-	
-	end_iter = clock(); 
-	duration_iter = (float)(end_iter - start_iter) / CLOCKS_PER_SEC; 
+	printf("%ld", result_iter);
+
+	end_iter = clock();
+	duration_iter = (float)(end_iter - start_iter) / CLOCKS_PER_SEC;
 	printf("\niter 수행시간은 %f초입니다.\n", duration_iter);
-	
+
 	printf("\n");
-	
-	clock_t start_rec, end_rec; 
+
+	clock_t start_rec, end_rec;
 	float duration_rec;
 	start_rec = clock();
 
@@ -29,7 +29,7 @@ int main() {
 
 	end_rec = clock();
 	duration_rec = (float)(end_rec - start_rec) / CLOCKS_PER_SEC;
-	printf("\nrec 수행시간은 %f초입니다.\n", duration_rec); 
+	printf("\nrec 수행시간은 %f초입니다.\n", duration_rec);
 
 	return 0;
 }
@@ -37,7 +37,7 @@ int main() {
 long factorial_iter(long n) {
 	long f = 1;
 	for (int i = 1; i <= n; i++) {
-		f *= i; 
+		f *= i;
 	}
 	return f;
 }
@@ -51,9 +51,9 @@ long factorial_rec(long n) {
 #include <stdio.h>
 #include <time.h> 
 
-long power_iter(a,b);
-long power_rec(a,b);
- 
+long power_iter(a, b);
+long power_rec(a, b);
+
 int main() {
 	clock_t start_iter, end_iter;
 	double duration_iter;
@@ -69,25 +69,25 @@ int main() {
 	clock_t start_rec, end_rec;
 	double duration_rec;
 	start_rec = clock();
-	
-	long result_rec = power_rec(13, 21); 
+
+	long result_rec = power_rec(13, 21);
 	printf("%ld", result_rec);
 
 	end_rec = clock();
 	duration_rec = (float)(end_rec - start_rec) / CLOCKS_PER_SEC;
-	printf("\niter수행시간은 %f초입니다.\n", duration_rec);
+	printf("\nrec 수행시간은 %f초입니다.\n", duration_rec);
 
 	return 0;
-} 
+}
 
 long power_iter(a, b) {
 	int p = 1;
 	for (int i = 1; i <= b; i++) {
-		p *= a; 
+		p *= a;
 	}
-	return p; 
+	return p;
 }
 long power_rec(a, b) {
 	if (b <= 1) return 1;
-	else return a * power_iter(a, b - 1);  
+	else return a * power_iter(a, b - 1);
 }

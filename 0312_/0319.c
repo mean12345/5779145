@@ -53,7 +53,7 @@ long factorial_rec(long n) {
 
 long power_iter(a,b);
 long power_rec(a,b);
-
+ 
 int main() {
 	clock_t start_iter, end_iter;
 	double duration_iter;
